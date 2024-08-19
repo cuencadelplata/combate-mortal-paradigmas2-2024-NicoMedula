@@ -14,13 +14,13 @@ import org.junit.Test;
 
 public class EjercitoTest {
 
-    @Test
-    public void vida_soldado_Test(){
 
+    @Test
+    public void soldado_puede_disparar_Test(){
         Soldado s1 = new Soldado();
-       
-        s1.setVida(1);
-        assert s1.getVida() == 1 ;
+
+        s1.setDisparo(1);
+        assert s1.getDisparo() == 1;
     }
     
 }
