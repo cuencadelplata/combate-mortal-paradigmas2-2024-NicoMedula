@@ -16,4 +16,16 @@ public class Buque extends Ejercito {
     public double getVidaBuque(){
         return vida;
     }
+
+    public String getEstadodevidaBuque() {
+
+        if (vida>0) {
+            return "El buque sigue con vida";
+            
+        }else{
+            
+            return "El buque ah muerto";
+        }
+       
+    }
 }

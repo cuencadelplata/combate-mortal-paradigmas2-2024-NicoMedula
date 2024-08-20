@@ -66,7 +66,7 @@ public class EjercitoTest {
         t1.recibirDisparoTanque();
 
         assert t1.getVidaDeTanque()== 0;
-        assert t1.getEstadodevidaTanque() == "El tanque ah muerto";
+       
 
     }
 
@@ -84,6 +84,44 @@ public class EjercitoTest {
         assert b1.getVidaBuque()== 0;
         
 
+    }
+
+    //Soldado puede preguntar si esta vivo o muerto
+    @Test
+    public void soldado_puede_preguntar_si_esta_vivo_o_muerto_Test(){
+
+        Soldado s1 = new Soldado();
+
+        s1.recibirDisparoSoldado();
+
+        assert s1.getEstadodevidaSoldado() == "El soldado ah muerto";
+    }
+
+    //Tanque puede preguntar si esta vivo o muerto
+    @Test
+    public void tanque_puede_preguntar_si_esta_vivo_o_muerto_Test(){
+
+        Tanque t1 = new Tanque();
+
+        t1.setVida(2);
+        t1.recibirDisparoTanque();
+        t1.recibirDisparoTanque();
+
+        assert t1.getEstadodevidaTanque() == "El tanque ah muerto";
+    }
+
+    //Buque puede preguntar si esta vivo o muerto
+    @Test
+    public void buque_puede_preguntar_si_esta_vivo_o_muerto_Test(){
+
+        Buque b1 = new Buque();
+
+        b1.setVida(2);
+        b1.recibirDisparoBuque();
+        b1.recibirDisparoBuque();
+        b1.recibirDisparoBuque();
+
+        assert b1.getEstadodevidaBuque() == "El buque ah muerto";
     }
     
 }
