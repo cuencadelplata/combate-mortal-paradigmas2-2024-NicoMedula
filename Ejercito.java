@@ -13,6 +13,7 @@ public class Ejercito {
 
     double vida;
     double disparo;
+    
 
     public void setVida(int valor){
         vida=valor;
@@ -30,6 +31,7 @@ public class Ejercito {
         return disparo;
     }
 
+   
     
 
 

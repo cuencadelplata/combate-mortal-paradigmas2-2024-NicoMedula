@@ -10,6 +10,8 @@
     El escudo puede tener un porcentaje que  disminuye el daño (Si el escudo tiene un 50%, entonces el daño hace solo el 50% cuando se recibe)
 */
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
 public class EjercitoTest {
@@ -45,13 +47,14 @@ public class EjercitoTest {
     //Soldado pue recibir disparo y muere de 1 diparo
     @Test
     public void soldado_puede_recibir_disparo_y_muere_de_1_disparo(){
+
         Soldado s1 = new Soldado();
 
-
-        s1.setVida(1);
+        s1.setVida(2);
+        
         s1.recibirDisparoSoldado();
-
-        assert s1.getVidadeSoldado()==0;
+        
+        assert s1.getVidadeSoldado() == 0;
 
     }
 
@@ -124,4 +127,26 @@ public class EjercitoTest {
         assert b1.getEstadodevidaBuque() == "El buque ah muerto";
     }
     
+
+    //Soldado recibe disparo con 50% escudo
+    @Test
+    public void soldado_recibe_disparo_con_50_escudo_Test(){
+
+        Soldado s1 = new Soldado();
+        Escudo e1 = new Escudo(0.50);
+
+
+
+        s1.setVida(4);
+        s1.setEscudo(e1);
+
+        s1.recibirDisparoSoldado();
+        s1.recibirDisparoSoldado();
+        
+        
+
+        assertEquals(0, s1.getVidadeSoldado(), 0.01);
+
+
+    }
 }
