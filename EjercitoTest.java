@@ -149,4 +149,26 @@ public class EjercitoTest {
 
 
     }
+
+    //Tanque recibe disparo con 50% escudo
+    @Test
+    public void tanque_recibe_disparo_con_50_escudo_Test(){
+
+        Tanque t1 = new Tanque();
+        Escudo e1 = new Escudo(0.50);
+
+
+
+        t1.setVidaTanque(1);
+        t1.setEscudo(e1);
+
+        t1.recibirDisparoTanque();
+        t1.recibirDisparoTanque();
+        t1.recibirDisparoTanque();
+        t1.recibirDisparoTanque();
+       
+
+        assertEquals(0, t1.getVidaDeTanque(), 0.01);
+    }
+
 }

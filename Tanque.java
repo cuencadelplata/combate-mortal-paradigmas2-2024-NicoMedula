@@ -1,15 +1,41 @@
 public class Tanque extends Ejercito {
 
-    private double disparosRecibidos;
+    private int disparosRecibidos = 0;
+    private Escudo escudo;
+    private double vidaInicial;
+
+    public Tanque() {
+        this.vida = 4;  
+        this.vidaInicial = vida; 
+    }
+
+    public void setVidaTanque(double valor) {
+        this.vida = valor;
+        this.vidaInicial = valor; 
+    }
+
+    public void setEscudo(Escudo escudo) {
+        this.escudo = escudo;
+    }
 
     public void recibirDisparoTanque(){
-        disparosRecibidos++;
+        
+        double dañoPorDisparo;
 
-        if (disparosRecibidos >= 2){
-            vida=0;
-        }else{
-            vida=vida/2;
-        }
+    if (escudo != null) {
+        dañoPorDisparo = vidaInicial / 4; 
+    } else {
+        dañoPorDisparo = vidaInicial / 2; 
+    }
+
+    vida -= dañoPorDisparo;
+
+    if (vida < 0) {
+        vida = 0;
+    }
+
+        
+       
     }
 
     public String getEstadodevidaTanque(){

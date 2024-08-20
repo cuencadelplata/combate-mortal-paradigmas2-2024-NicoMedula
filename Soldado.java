@@ -1,7 +1,6 @@
 public class Soldado extends Ejercito {
 
     private Escudo escudo;
-    public double valorVida=vida;
     int contEscudo = 0;
 
    
@@ -13,16 +12,10 @@ public class Soldado extends Ejercito {
     public void recibirDisparoSoldado(){
         
         double dañoOriginal = vida;
-        
-        
-
 
         if (escudo != null && contEscudo==0) {
-
             dañoOriginal = escudo.reducirDaño(dañoOriginal);
             contEscudo+= 1;
-           
-
         }
 
         vida -= dañoOriginal;

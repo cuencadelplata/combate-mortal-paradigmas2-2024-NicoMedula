@@ -13,10 +13,12 @@ public class Ejercito {
 
     double vida;
     double disparo;
+  
     
 
     public void setVida(int valor){
         vida=valor;
+       
     }
 
     public double getVida(){
