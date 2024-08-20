@@ -14,13 +14,76 @@ import org.junit.Test;
 
 public class EjercitoTest {
 
-
+    //Soldado puede disparar
     @Test
     public void soldado_puede_disparar_Test(){
         Soldado s1 = new Soldado();
 
         s1.setDisparo(1);
         assert s1.getDisparo() == 1;
+    }
+
+    //Tanque puede disparar
+    @Test 
+    public void tanque_puede_disparar_Test(){
+        Tanque t1 = new Tanque();
+        t1.setDisparo(2);
+
+        assert t1.getDisparo() == 2;
+    }
+
+    //Buque puede disparar
+    @Test 
+    public void buque_puede_disparar_Test(){
+        Buque b1 = new Buque();
+        b1.setDisparo(3);
+
+        assert b1.getDisparo() == 3;
+    }
+
+
+    //Soldado pue recibir disparo y muere de 1 diparo
+    @Test
+    public void soldado_puede_recibir_disparo_y_muere_de_1_disparo(){
+        Soldado s1 = new Soldado();
+
+
+        s1.setVida(1);
+        s1.recibirDisparoSoldado();
+
+        assert s1.getVidadeSoldado()==0;
+
+    }
+
+    //Tanque puede recibir disparo y muere de 2 diparos
+    @Test
+    public void tanque_puede_recibir_disparo_y_muere_de_2_disparos(){
+        Tanque t1 = new Tanque();
+
+
+        t1.setVida(1);
+        t1.recibirDisparoTanque();
+        t1.recibirDisparoTanque();
+
+        assert t1.getVidaDeTanque()== 0;
+        assert t1.getEstadodevidaTanque() == "El tanque ah muerto";
+
+    }
+
+    //Buque puede recibir disparo y muere de 3 diparos
+    @Test
+    public void buque_puede_recibir_disparo_y_muere_de_3_disparos(){
+        Buque b1 = new Buque();
+
+
+        b1.setVida(9);
+        b1.recibirDisparoBuque();
+        b1.recibirDisparoBuque();
+        b1.recibirDisparoBuque();
+
+        assert b1.getVidaBuque()== 0;
+        
+
     }
     
 }

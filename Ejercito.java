@@ -11,14 +11,14 @@
  */
 public class Ejercito {
 
-    int vida;
-    int disparo;
+    double vida;
+    double disparo;
 
     public void setVida(int valor){
         vida=valor;
     }
 
-    public int getVida(){
+    public double getVida(){
         return vida;
     }
 
@@ -26,8 +26,13 @@ public class Ejercito {
         disparo=valor;
     }
 
-    public int getDisparo(){
+    public double getDisparo(){
         return disparo;
     }
+
+    
+
+
+
 
 }
