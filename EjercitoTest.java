@@ -79,7 +79,7 @@ public class EjercitoTest {
         Buque b1 = new Buque();
 
 
-        b1.setVida(9);
+        b1.setVidaBuque(9);
         b1.recibirDisparoBuque();
         b1.recibirDisparoBuque();
         b1.recibirDisparoBuque();
@@ -165,10 +165,29 @@ public class EjercitoTest {
         t1.recibirDisparoTanque();
         t1.recibirDisparoTanque();
         t1.recibirDisparoTanque();
-        t1.recibirDisparoTanque();
+       
        
 
         assertEquals(0, t1.getVidaDeTanque(), 0.01);
+    }
+
+
+    //Buque recibe disparo con 50% escudo
+    @Test
+    public void buque_recibe_disparo_con_50_escudo_Test(){
+
+        Buque b1 = new Buque();
+        Escudo e1 = new Escudo(0.50);
+
+
+
+        b1.setVidaBuque(1);
+        b1.setEscudo(e1);
+
+        b1.recibirDisparoBuque();
+        
+
+        assertEquals(0.80, b1.getVidaBuque(), 0.01);
     }
 
 }

@@ -1,16 +1,35 @@
 public class Buque extends Ejercito {
 
-    private double recibeDisparo;
+
+    private double  vidaInicial;
+    private Escudo escudo;
+
+    public Buque() {
+        this.vida = 4;  
+        this.vidaInicial = vida; 
+    }
+
+    public void setVidaBuque(double valor) {
+        this.vida = valor;
+        this.vidaInicial = valor; 
+    }
 
     public void recibirDisparoBuque(){
 
-        recibeDisparo++;
+        double dañoPorDisparo;
 
-        if (recibeDisparo >=3) {
-            vida=0;
-        }else{
-            vida=vida/3;
+        if (escudo != null) {
+            dañoPorDisparo = vidaInicial / 5; 
+        } else {
+            dañoPorDisparo = vidaInicial / 3; 
         }
+    
+        vida -= dañoPorDisparo;
+    
+        if (vida < 0) {
+            vida = 0;
+        }
+    
     }
 
     public double getVidaBuque(){
@@ -28,4 +47,10 @@ public class Buque extends Ejercito {
         }
        
     }
+
+    public void setEscudo(Escudo escudo) {
+        this.escudo = escudo;
+    }
+
+    
 }

@@ -1,6 +1,6 @@
 public class Tanque extends Ejercito {
 
-    private int disparosRecibidos = 0;
+    
     private Escudo escudo;
     private double vidaInicial;
 
@@ -23,7 +23,7 @@ public class Tanque extends Ejercito {
         double dañoPorDisparo;
 
     if (escudo != null) {
-        dañoPorDisparo = vidaInicial / 4; 
+        dañoPorDisparo = vidaInicial / 3; 
     } else {
         dañoPorDisparo = vidaInicial / 2; 
     }
@@ -33,8 +33,7 @@ public class Tanque extends Ejercito {
     if (vida < 0) {
         vida = 0;
     }
-
-        
+   
        
     }
 
