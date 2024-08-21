@@ -8,6 +8,7 @@
     Todos deberían poder preguntar si esta vivo.
     Se requiere poder armar un Escudo y pasarlo a un item (sea Soldado, Tanque o Buque)
     El escudo puede tener un porcentaje que  disminuye el daño (Si el escudo tiene un 50%, entonces el daño hace solo el 50% cuando se recibe)
+    ChuckNorris: puede matar a todos pero nadie lo puede matar a el (ni tanques, soldados ni buques)
  */
 public class Ejercito {
 

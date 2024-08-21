@@ -190,4 +190,18 @@ public class EjercitoTest {
         assertEquals(0.80, b1.getVidaBuque(), 0.01);
     }
 
+
+    @Test
+    public void chucknorris_recibe_disparo_y_no_muere_Test(){
+
+        ChuckNorris ch1 = new ChuckNorris();
+        Tanque t1 = new Tanque();
+
+        ch1.setVida(1);
+        ch1.recibeDisparoCH(t1);
+
+        assert ch1.getVida() == 1;
+
+
+    }
 }

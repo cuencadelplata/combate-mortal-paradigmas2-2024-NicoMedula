@@ -31,7 +31,7 @@ public class Tanque extends Ejercito {
     vida -= dañoPorDisparo;
 
     if (vida < 0) {
-        vida = 0;
+        setVida(0);
     }
    
        
