@@ -18,7 +18,7 @@ public class Tanque extends Ejercito {
         this.escudo = escudo;
     }
 
-    public void recibirDisparoTanque(){
+    public void recibirDisparoTanque(Ejercito ejer){
         
         double dañoPorDisparo;
 

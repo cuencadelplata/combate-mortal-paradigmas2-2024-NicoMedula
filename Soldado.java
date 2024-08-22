@@ -9,7 +9,7 @@ public class Soldado extends Ejercito {
         this.escudo = escudo;
     }
     
-    public void recibirDisparoSoldado(){
+    public void recibirDisparoSoldado(Ejercito ejer){
         
         double dañoOriginal = getVida();
 

@@ -14,7 +14,7 @@ public class Buque extends Ejercito {
         this.vidaInicial = valor; 
     }
 
-    public void recibirDisparoBuque(){
+    public void recibirDisparoBuque(Ejercito ejer){
 
         double dañoPorDisparo;
 

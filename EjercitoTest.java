@@ -49,10 +49,11 @@ public class EjercitoTest {
     public void soldado_puede_recibir_disparo_y_muere_de_1_disparo(){
 
         Soldado s1 = new Soldado();
+        Soldado s2 = new Soldado();
 
         s1.setVida(2);
         
-        s1.recibirDisparoSoldado();
+        s1.recibirDisparoSoldado(s2);
         
         assert s1.getVidadeSoldado() == 0;
 
@@ -62,11 +63,12 @@ public class EjercitoTest {
     @Test
     public void tanque_puede_recibir_disparo_y_muere_de_2_disparos(){
         Tanque t1 = new Tanque();
+        Tanque t2 = new Tanque();
 
 
         t1.setVida(1);
-        t1.recibirDisparoTanque();
-        t1.recibirDisparoTanque();
+        t1.recibirDisparoTanque(t2);
+        t1.recibirDisparoTanque(t2);
 
         assert t1.getVidaDeTanque()== 0;
        
@@ -77,12 +79,13 @@ public class EjercitoTest {
     @Test
     public void buque_puede_recibir_disparo_y_muere_de_3_disparos(){
         Buque b1 = new Buque();
+        Tanque t2 = new Tanque();
 
 
         b1.setVidaBuque(9);
-        b1.recibirDisparoBuque();
-        b1.recibirDisparoBuque();
-        b1.recibirDisparoBuque();
+        b1.recibirDisparoBuque(t2);
+        b1.recibirDisparoBuque(t2);
+        b1.recibirDisparoBuque(t2);
 
         assert b1.getVidaBuque()== 0;
         
@@ -94,8 +97,9 @@ public class EjercitoTest {
     public void soldado_puede_preguntar_si_esta_vivo_o_muerto_Test(){
 
         Soldado s1 = new Soldado();
+        Soldado s2 = new Soldado();
 
-        s1.recibirDisparoSoldado();
+        s1.recibirDisparoSoldado(s2);
 
         assert s1.getEstadodevidaSoldado() == "El soldado ah muerto";
     }
@@ -105,10 +109,11 @@ public class EjercitoTest {
     public void tanque_puede_preguntar_si_esta_vivo_o_muerto_Test(){
 
         Tanque t1 = new Tanque();
+        Tanque t2 = new Tanque();
 
         t1.setVida(2);
-        t1.recibirDisparoTanque();
-        t1.recibirDisparoTanque();
+        t1.recibirDisparoTanque(t2);
+        t1.recibirDisparoTanque(t2);
 
         assert t1.getEstadodevidaTanque() == "El tanque ah muerto";
     }
@@ -118,11 +123,12 @@ public class EjercitoTest {
     public void buque_puede_preguntar_si_esta_vivo_o_muerto_Test(){
 
         Buque b1 = new Buque();
+        Tanque t2 = new Tanque();
 
         b1.setVida(2);
-        b1.recibirDisparoBuque();
-        b1.recibirDisparoBuque();
-        b1.recibirDisparoBuque();
+        b1.recibirDisparoBuque(t2);
+        b1.recibirDisparoBuque(t2);
+        b1.recibirDisparoBuque(t2);
 
         assert b1.getEstadodevidaBuque() == "El buque ah muerto";
     }
@@ -134,14 +140,15 @@ public class EjercitoTest {
 
         Soldado s1 = new Soldado();
         Escudo e1 = new Escudo(0.50);
+        Soldado s2 = new Soldado();
 
 
 
         s1.setVida(4);
         s1.setEscudo(e1);
 
-        s1.recibirDisparoSoldado();
-        s1.recibirDisparoSoldado();
+        s1.recibirDisparoSoldado(s2);
+        s1.recibirDisparoSoldado(s2);
         
         
 
@@ -156,15 +163,16 @@ public class EjercitoTest {
 
         Tanque t1 = new Tanque();
         Escudo e1 = new Escudo(0.50);
+        Tanque t2 = new Tanque();
 
 
 
         t1.setVidaTanque(1);
         t1.setEscudo(e1);
 
-        t1.recibirDisparoTanque();
-        t1.recibirDisparoTanque();
-        t1.recibirDisparoTanque();
+        t1.recibirDisparoTanque(t2);
+        t1.recibirDisparoTanque(t2);
+        t1.recibirDisparoTanque(t2);
        
        
 
@@ -178,13 +186,14 @@ public class EjercitoTest {
 
         Buque b1 = new Buque();
         Escudo e1 = new Escudo(0.50);
+        Tanque t2 = new Tanque();
 
 
 
         b1.setVidaBuque(1);
         b1.setEscudo(e1);
 
-        b1.recibirDisparoBuque();
+        b1.recibirDisparoBuque(t2);
         
 
         assertEquals(0.80, b1.getVidaBuque(), 0.01);
@@ -203,5 +212,17 @@ public class EjercitoTest {
         assert ch1.getVida() == 1;
 
 
+    }
+
+    @Test 
+    public void chucknorris_puede_matar_Test(){
+
+        ChuckNorris ch1 = new ChuckNorris();
+        Soldado s1 = new Soldado();
+
+        s1.setVida(4);
+        s1.recibirDisparoSoldado(ch1);
+
+        assert s1.getVida()==0;
     }
 }
