@@ -1,3 +1,5 @@
+package miproyecto.ejercito;
+
 public class Buque extends Ejercito {
 
 

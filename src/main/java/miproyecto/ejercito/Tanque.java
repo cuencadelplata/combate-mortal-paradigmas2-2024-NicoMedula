@@ -1,3 +1,4 @@
+package miproyecto.ejercito;
 public class Tanque extends Ejercito {
 
     
@@ -33,8 +34,7 @@ public class Tanque extends Ejercito {
     if (vida < 0) {
         setVida(0);
     }
-   
-       
+
     }
 
     public String getEstadodevidaTanque(){

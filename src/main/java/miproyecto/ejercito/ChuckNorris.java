@@ -1,3 +1,4 @@
+package miproyecto.ejercito;
 public class ChuckNorris extends Ejercito {
     
     public void setVidaChuck(int valor){

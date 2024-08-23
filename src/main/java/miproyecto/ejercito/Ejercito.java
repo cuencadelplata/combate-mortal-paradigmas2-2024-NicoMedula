@@ -1,3 +1,7 @@
+package miproyecto.ejercito;
+
+
+
 /*
     Se requiere tener Soldados, Tanques, Buques
     Todos pueden disparar.
@@ -14,12 +18,12 @@ public class Ejercito {
 
     double vida;
     double disparo;
-  
+
     
 
     public void setVida(int valor){
         vida=valor;
-       
+
     }
 
     public double getVida(){
@@ -34,7 +38,7 @@ public class Ejercito {
         return disparo;
     }
 
-   
+
     
 
 

@@ -1,3 +1,5 @@
+package miproyecto.ejercito;
+
 public class Escudo {
     
     private double porcentajeReduccion;

@@ -1,3 +1,15 @@
+package mitest.ejercitotest;
+import miproyecto.ejercito.Soldado;
+import miproyecto.ejercito.Tanque;
+import miproyecto.ejercito.Buque;
+import miproyecto.ejercito.ChuckNorris;
+import miproyecto.ejercito.Escudo;
+
+
+
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
 
 /*
     Se requiere tener Soldados, Tanques, Buques
@@ -11,11 +23,12 @@
     El escudo puede tener un porcentaje que  disminuye el daño (Si el escudo tiene un 50%, entonces el daño hace solo el 50% cuando se recibe)
 */
 
-import static org.junit.Assert.assertEquals;
 
-import org.junit.Test;
+
+
 
 public class EjercitoTest {
+
 
     //Soldado puede disparar
     @Test

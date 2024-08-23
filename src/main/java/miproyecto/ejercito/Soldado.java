@@ -1,3 +1,5 @@
+package miproyecto.ejercito;
+
 public class Soldado extends Ejercito {
 
     private Escudo escudo;
